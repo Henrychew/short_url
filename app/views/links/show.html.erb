@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Long url:</strong>
+  <%= @link.long_url %>
+</p>
+
+<p>
+  <strong>Short url:</strong>
+  <%= link_to(redirect_url(@link.short_url), redirect_path(@link.short_url))  %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @link.counter %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
